@@ -1,5 +1,8 @@
 # -*- coding: utf-8
+<<<<<<< HEAD
 import env_check
+=======
+>>>>>>> 7c4d61cd3b899d1ead522b5b2c73906211f97127
 from configparser import ConfigParser
 from selenium.webdriver.chrome.options import Options
 from argparse import ArgumentParser
@@ -11,6 +14,7 @@ import re
 warnings.filterwarnings('ignore')
 
 
+<<<<<<< HEAD
 def sys_path(browser):
     path = f'./{browser}/bin/'
     if sys.platform.startswith('win'):
@@ -23,6 +27,8 @@ def sys_path(browser):
         raise Exception('暂不支持该系统')
 
 
+=======
+>>>>>>> 7c4d61cd3b899d1ead522b5b2c73906211f97127
 def go(config):
     conf = ConfigParser()
     conf.read(config, encoding='utf8')
@@ -52,7 +58,11 @@ if __name__ == '__main__':
     chrome_options.add_argument("--headless")
     driver_pjs = webdriver.Edge(
             options=chrome_options,
+<<<<<<< HEAD
             executable_path=sys_path(browser="chromedriver"),
+=======
+            executable_path='/usr/bin/chromedriver',
+>>>>>>> 7c4d61cd3b899d1ead522b5b2c73906211f97127
             service_args=['--ignore-ssl-errors=true', '--ssl-protocol=TLSv1'])
     print('Driver Launched\n')
 
