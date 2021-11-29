@@ -2,12 +2,7 @@ name: PKUAutoSubmit
 
 on:
   schedule:
-<<<<<<< HEAD
-    - cron: '0 0,2 * * *'
-=======
-    - cron: '0 4 * * 3,4,5'
->>>>>>> 7c4d61cd3b899d1ead522b5b2c73906211f97127
-    
+    - cron: '0 0,2 * * *'    
   workflow_dispatch:
 
 jobs:
@@ -25,21 +20,11 @@ jobs:
            python-version: 3.7
            
       - name: 'Install requirements'
-<<<<<<< HEAD
-        run: pip install selenium
-        
-      - name: 'Working'
-        run: |
-          sudo cp -p ./chromedriver/bin/chromedriver /usr/bin/
-          chmod -R 777 /usr/bin/chromedriver
-          chmod -R 777 ./chromedriver/bin/chromedriver
-=======
         run: 
           pip install selenium
         
       - name: 'Working'
         run:
->>>>>>> 7c4d61cd3b899d1ead522b5b2c73906211f97127
           python main.py --ID ${{secrets.ID}} --PASSWORD ${{secrets.PASSWORD}} --MAIL_ADDRESS ${{secrets.MAIL_ADDRESS}} --PHONE_NUMBER ${{secrets.PHONE_NUMBER}} --SENDKEY ${{secrets.SENDKEY}}
           
 
